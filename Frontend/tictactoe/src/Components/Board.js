@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Square from "./Square";
+import {useSpeechSynthesis} from "react-speech-kit";
 
 function Board({socket, username, past, setPast}) {
 
@@ -7,6 +8,7 @@ function Board({socket, username, past, setPast}) {
     const [player, setPlayer] = useState("X");
     const [turn, setTurn] = useState("X");
 
+    const {speak} = useSpeechSynthesis();
     
     useEffect(() => {
         const winningPatterns = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
@@ -28,6 +30,7 @@ function Board({socket, username, past, setPast}) {
 
     const chooseSquare = async (square) => {
         if (turn === player && board[square] === "") {
+            speak({text: `${player} placed on ${square}`})
             setTurn(player === "X" ? "O" : "X");
             await socket.emit("sendMove", {square, "id": socket.id, player, username})
             setBoard(board.map((val, index) => {

@@ -5,6 +5,7 @@ import JoinGame from './Components/JoinGame';
 import PastGames from './Components/PastGames';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { Button, TextField, Typography } from '@mui/material';
 
 const newSocket = io(`ws://${window.location.hostname}:8080`);
 
@@ -27,15 +28,16 @@ function App() {
   })
 
   return (
-    <div className="App">
+    <div className="App" style={{display:"flex", flexDirection:"column"}}>
+    <Typography variant='h1'>Tictactoe</Typography><br/><br/>
       <Routes>
         <Route path="/" element={
           <div>
-              <h2>Enter username</h2>
-              <input placeholder="Username" value={username} onChange={ async (event) => {
-                setUsername(event.target.value);}}></input>
-              <button onClick={() => {navigate("rooms")}}>New Game</button>
-            <button onClick={() => {navigate("past")}}>Past Games</button>
+              <Typography variant="h4">Enter username</Typography>
+              <TextField label="Username" variant="outlined" value={username} onChange={ async (event) => {
+                setUsername(event.target.value);}}/>
+              <Button variant="contained" onClick={() => {navigate("rooms")}}>New Game</Button>
+              <Button variant="contained" onClick={() => {navigate("past")}}>Past Games</Button>
           </div>
         } />
         <Route path="/past" element={<PastGames past={past}/>} />

@@ -1,3 +1,4 @@
+import { TableCell, TableRow, Typography } from "@mui/material";
 
 function PastGames({ past }) {
 
@@ -5,10 +6,10 @@ function PastGames({ past }) {
     for (const game of Object.keys(past)) {
         games.push(
             <div key={game}>
-                <tr><td style={{padding:10}}><h2>Game {game}</h2></td>
-                <td style={{padding:10}}><h3>{past[game].map(el => {
-                    return (<div>{el}</div>)
-                })}</h3></td></tr>
+                <TableRow><TableCell style={{padding:10}}><Typography variant="h3">Game {game}</Typography></TableCell>
+                <TableCell style={{padding:10}}><Typography variant="h4">{past[game].map(el => {
+                    return (<Typography variant="h6">{el}</Typography>)
+                })}</Typography></TableCell></TableRow>
             </div>
         )
     }
