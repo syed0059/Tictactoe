@@ -40,7 +40,7 @@ Please refer to the Accessibility_feature.mp4 video in the /demos folder to view
 
 Please refer to the 4_simultaneous_players.mp4 video in the /demos folder to view the full length video demonstrating the app being used by 4 players simultaneously.
 
-### API
+## API
 
 The application uses websockets instead of a REST API as it is more efficient than HTTP for real time communication and also allows for multiple unique sessions simlutaneously.
 
@@ -48,9 +48,9 @@ Below are the websocket events required for the backend server.
 
 ![alt text](https://github.com/syed0059/Tictactoe/blob/master/demo/websocket_events.png)
 
-### Summary
+## Summary
 
-For the sake of this demo, I did not use a database to store the previous game records and instead chose to store them in memory.
+For the sake of this demo, I did not use a database to store the previous game records and instead chose to store them in memory as I did not feel that it was a core aspect of the project.
 
 My assumptions for this project were that although the users are visually impaired, they are able to make out items on the screen and notice high-contrast colours.
 
@@ -61,7 +61,7 @@ The UI also uses a light-mode colour palette as they may have difficulty seeing 
 The user may navigate the tic-tac-toe grid using arrow-keys, and every box itself has text such that when it is highlighted the screen-reader will infrom the user exactly which box they are on. 
 Every time a user places their piece, there is also a voiceover to inform the user exactly which box has been selected.
 
-### Architecture
+## Architecture
 
 Frontent - ReactJS
 
@@ -70,3 +70,7 @@ Backend - NodeJS
 UI - Material UI
 
 The frontend and the backend communicate over websockets using the websocket.io library
+
+## Note
+
+This app is not fully finished as it is lacking polish and certain features - such as making players wait till there are 2 players in a session. Howeveer, it captures all of the core functionality that such an app should have, and showcases how it could be suited to enable accessibility to all.
