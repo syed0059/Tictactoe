@@ -1,4 +1,4 @@
-# Tictactoe - GDS Accessibility Enabling Team take-home assignment
+# Tictactoe - GDS Accessibility Enabling Team
 
 ## Screenshots
 
