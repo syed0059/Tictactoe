@@ -1,20 +1,23 @@
 # Tictactoe - GDS Accessibility Enabling Team take-home assignment
 
-### Screenshots
+## Screenshots
 
 Start page
+
 ![alt text](https://github.com/syed0059/Tictactoe/blob/master/demo/Startpage.png)
 
 Sessions page
+
 ![alt text](https://github.com/syed0059/Tictactoe/blob/master/demo/Sessionspage.png)
 
 2-player game
 ![alt text](https://github.com/syed0059/Tictactoe/blob/master/demo/2%20Games.png)
 
 Previous games
+
 ![alt text](https://github.com/syed0059/Tictactoe/blob/master/demo/Previousgames.png)
 
-### instructions
+## instructions
 
 1) To install the application, first clone the entire repository.
 2) To install all the depenedencies, open a terminal and run the `npm install` command in both the /Backend directory and /Frontend/tictactoe directories.
@@ -22,7 +25,7 @@ Previous games
 4) To run the frontend, navigate to the /Frontend/tictactoe directory in a terminal and run the `npm start` command.
 5) The app should now be running on your computer's `localhost:3000` and can be accessed through a browser.
 
-### Design
+## Design
 
 ![alt text](https://github.com/syed0059/Tictactoe/blob/master/demo/2%20Games.png)
 High-contrast colours on a simple UI to make it easier for users to discern what is occuring, on top of voiceovers.
