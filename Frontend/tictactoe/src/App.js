@@ -5,7 +5,7 @@ import JoinGame from './Components/JoinGame';
 import PastGames from './Components/PastGames';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { Button, TextField, Typography } from '@mui/material';
+import { Button, Stack, TextField, Typography } from '@mui/material';
 
 const newSocket = io(`ws://${window.location.hostname}:8080`);
 
@@ -33,11 +33,13 @@ function App() {
       <Routes>
         <Route path="/" element={
           <div>
-              <Typography variant="h4">Enter username</Typography>
+            <Typography variant="h4">Enter username</Typography>
+            <Stack direction="row">
               <TextField label="Username" variant="outlined" value={username} onChange={ async (event) => {
                 setUsername(event.target.value);}}/>
               <Button variant="contained" onClick={() => {navigate("rooms")}}>New Game</Button>
               <Button variant="contained" onClick={() => {navigate("past")}}>Past Games</Button>
+            </Stack>
           </div>
         } />
         <Route path="/past" element={<PastGames past={past}/>} />
