@@ -46,6 +46,8 @@ Below are the websocket events required for the backend server.
 
 ### Summary
 
+For the sake of this demo, I did not use a database to store the previous game records and instead chose to store them in memory.
+
 My assumptions for this project were that although the users are visually impaired, they are able to make out items on the screen and notice high-contrast colours.
 
 With that in mind, I designed the UI to be as simple as possible to make it easier to navigate using only a keyboard. I have also included text wherever possible, such as for each box in the tic-tac-toe grid, to allow a screen-reader to verbalise exactly what is going on in the screen.
