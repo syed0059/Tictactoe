@@ -73,4 +73,4 @@ The frontend and the backend communicate over websockets using the websocket.io 
 
 ## Note
 
-This app is not fully finished as it is lacking polish and certain features - such as making players wait till there are 2 players in a session. Howeveer, it captures all of the core functionality that such an app should have, and showcases how it could be suited to enable accessibility to all.
+This app is not fully finished as it is lacking polish and certain features - such as making players wait till there are 2 players in a session. However, it captures all of the core functionality that such an app should have, and showcases how it could be suited to enable accessibility to all.
