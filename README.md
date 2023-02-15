@@ -2,6 +2,10 @@
 
 ## Screenshots
 
+Please refer to the Accessibility_feature.mp4 video in the /demos folder to view the full length video demonstrating the app being used with a screen-reader and keyboard.
+
+Please refer to the 4_simultaneous_players.mp4 video in the /demos folder to view the full length video demonstrating the app being used by 4 players simultaneously.
+
 Start page
 
 ![alt text](https://github.com/syed0059/Tictactoe/blob/master/demo/Startpage.png)
